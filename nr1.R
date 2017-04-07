@@ -33,7 +33,7 @@ plot(gg_dta)
 
 #Proximity Plot
 MDSplot(output.forest, sampleDoctorAUS$sex, k=2, pch=c(24,3), 
-        palette = c(3,5))
+        palette = c(4,4))
 
 #Partial dependency
 partialPlot(output.forest, DoctorAUS, actdays, "versicolor")
