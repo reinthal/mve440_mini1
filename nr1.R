@@ -1,5 +1,5 @@
-cat("\014")
-setwd("/chalmers/users/maglinds/CAS/Year_1/BigData/Assignment1")
+#cat("\014")
+#setwd("/chalmers/users/maglinds/CAS/Year_1/BigData/Assignment1")
 
 library(party)
 library(Ecdat)
@@ -21,7 +21,7 @@ allPairs <- pairs(~age+income+actdays+hscore+doctorco+
         prescrib,data=DoctorAUS,main="Simple Scatterplot Matrix")
 
 #Create a random forest to classify the sex of patients
-output.forest <- randomForest(sex~., data = sampleDoctorAUS, proximity = TRUE)
+output.forest <- randomForest(sex ~. , data = sampleDoctorAUS, proximity = TRUE)
 
 #Plot error curve
 plot(gg_error(output.forest))
